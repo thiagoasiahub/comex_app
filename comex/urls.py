@@ -20,6 +20,5 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.std),
-    path('results/', views.results),
     path('search/', include('haystack.urls')),
 ]
