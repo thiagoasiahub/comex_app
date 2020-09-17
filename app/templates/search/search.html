@@ -53,14 +53,14 @@
     <div class="container">
       <div class="row">
             About {{ imports_count }} results.
-            <table class="table table-striped table-bordered table-sm">
+            <table class="table table-striped table-borderless table-sm">
                 <thead class="thead-dark">
                     <tr>
-                        <th>INCOTERM</th>
-                        <th>DESCRIÇÃO</th>
-                        <th>PREÇO</th>
-                        <th>QUANTIDADE</th>
-                        <th>NCM</th>
+                        <th class="bg-primary">INCOTERM</th>
+                        <th class="bg-success">DESCRIÇÃO</th>
+                        <th class="bg-warning">PREÇO</th>
+                        <th class="bg-danger">QUANTIDADE</th>
+                        <th class="bg-info">NCM</th>
                     </tr>
                 </thead>
             {% for result in page.object_list %}
