@@ -44,6 +44,3 @@ def search(request):
     return render(request, 'search.html', {'results' : results, 
                                             'imports_count' : imports_count,
                                             })
-
-def results(request):
-    return render(request, 'results.html')
