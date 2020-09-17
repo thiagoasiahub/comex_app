@@ -1,0 +1,4 @@
+{{ object.incoterm }}
+{{ object.descricao_do_produto }}
+{{ object.qtd_comercial_field }}
+{{ object.cod_ncm }}
