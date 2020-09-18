@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+
+  elasticsearch:
+    image: launcher.gcr.io/google/elasticsearch2
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+          - esdata:/usr/share/elasticsearch/data
+
+volumes:
+  esdata:
+    driver: local
+  pgdata:
