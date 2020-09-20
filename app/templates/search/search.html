@@ -57,19 +57,21 @@
                 <thead class="thead-dark">
                     <tr>
                         <th class="bg-primary">INCOTERM</th>
-                        <th class="bg-success">DESCRIÇÃO</th>
-                        <th class="bg-warning">PREÇO</th>
-                        <th class="bg-danger">QUANTIDADE</th>
-                        <th class="bg-info">NCM</th>
+                        <th class="bg-primary">DESCRIÇÃO</th>
+                        <th class="bg-primary">PREÇO US$</th>
+                        <th class="bg-primary">QUANTIDADE</th>
+                        <th class="bg-primary">ANO/MÊS</th>
+                        <th class="bg-primary">NCM</th>
                     </tr>
                 </thead>
             {% for result in page.object_list %}
             <tr>
             <td>{{ result.incoterm }}</td>
             <td>{{ result.descricao_do_produto }}</td>
-            <td><a href="#">Acessar</a></td>
+            <td>{{ result.valor_un_prod_dolar }}</td>
             <td>{{ result.qtd_comercial_field }}</td>
-            <td>{{ result.cod_ncm }}</td>
+            <td>{{ result.anomes }}</td>
+            <td type="button" class="btn btn-link" data-toggle="popover" title="DESCRICAO DO CODIGO NCM" data-content="{{ result.descricao_do_codigo_ncm }}">{{ result.cod_ncm }}</td>
             {% endfor %}
             </tr>
             </table>
@@ -150,7 +152,11 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://startbootstrap.github.io/startbootstrap-landing-page/vendor/jquery/jquery.min.js"></script>
   <script src="https://startbootstrap.github.io/startbootstrap-landing-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+    </script>
 </body>
 
 </html>
