@@ -35,7 +35,7 @@
           <input type="text" name="q" data-toggle="popover" data-placement="bottom" data-content="Press enter to search" class="form-control" placeholder="Descrição do produto ou Código NCM..." value="{{ query }}" data-original-title="" title="" autofocus="autofocus" required>
         </div>
         <div class="col"><br>
-          <input type="submit" class="btn btn-primary" value="Search">
+          <input type="submit" class="btn btn-primary" value="Buscar">
         </div>
       </div>
       
@@ -51,14 +51,14 @@
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
-      <div class="row">
-            About {{ imports_count }} results.
+      <div class="row"><br>
+            <!-- About {{ imports_count }} results. -->
             <table class="table table-striped table-borderless table-sm">
                 <thead class="thead-dark">
                     <tr>
                         <th class="bg-primary">INCOTERM</th>
                         <th class="bg-primary">DESCRIÇÃO</th>
-                        <th class="bg-primary">PREÇO US$</th>
+                        <th class="bg-primary">PREÇO(US$)</th>
                         <th class="bg-primary">QUANTIDADE</th>
                         <th class="bg-primary">ANO/MÊS</th>
                         <th class="bg-primary">NCM</th>
@@ -68,7 +68,7 @@
             <tr>
             <td>{{ result.incoterm }}</td>
             <td>{{ result.descricao_do_produto }}</td>
-            <td>{{ result.valor_un_prod_dolar }}</td>
+            <td type="button" class="btn btn-link" data-toggle="popover" title="" data-content="Faça Login para Acessar">Acessar</td>
             <td>{{ result.qtd_comercial_field }}</td>
             <td>{{ result.anomes }}</td>
             <td type="button" class="btn btn-link" data-toggle="popover" title="DESCRICAO DO CODIGO NCM" data-content="{{ result.descricao_do_codigo_ncm }}">{{ result.cod_ncm }}</td>
@@ -79,8 +79,8 @@
             <div class="pagination">
               <span class="step-links">
                   {% if page.has_previous %}
-                      <a href="?page=1&q={{ request.GET.q }}">&laquo; first</a>
-                      <a href="?page={{ page.previous_page_number }}&q={{ request.GET.q }}">previous</a>
+                      <a href="?page=1&q={{ request.GET.q }}">&laquo; Primeira</a>
+                      <a href="?page={{ page.previous_page_number }}&q={{ request.GET.q }}">Anterior</a>
                   {% endif %}
 
                   <span class="current">
@@ -88,8 +88,8 @@
                   </span>
 
                   {% if page.has_next %}
-                      <a href="?page={{ page.next_page_number }}&q={{ request.GET.q }}">next</a>
-                      <a href="?page={{ page.paginator.num_pages }}&q={{ request.GET.q }}">last &raquo;</a>
+                      <a href="?page={{ page.next_page_number }}&q={{ request.GET.q }}">Próximo</a>
+                      <a href="?page={{ page.paginator.num_pages }}&q={{ request.GET.q }}">Último &raquo;</a>
                   {% endif %}
               </span>
             </div>           
