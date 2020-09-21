@@ -51,7 +51,7 @@
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
-      <div class="row"><br>
+      <div class="row">
             <!-- About {{ imports_count }} results. -->
             <table class="table table-striped table-borderless table-sm">
                 <thead class="thead-dark">
@@ -68,7 +68,7 @@
             <tr>
             <td>{{ result.incoterm }}</td>
             <td>{{ result.descricao_do_produto }}</td>
-            <td type="button" class="btn btn-link" data-toggle="popover" title="" data-content="Faça Login para Acessar">Acessar</td>
+            <td type="button" class="btn btn-link" data-toggle="popover" title="" data-content="Faça Login para Visualizar">Acessar</td>
             <td>{{ result.qtd_comercial_field }}</td>
             <td>{{ result.anomes }}</td>
             <td type="button" class="btn btn-link" data-toggle="popover" title="DESCRICAO DO CODIGO NCM" data-content="{{ result.descricao_do_codigo_ncm }}">{{ result.cod_ncm }}</td>
@@ -156,7 +156,7 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();   
     });
-    </script>
+  </script>
 </body>
 
 </html>
