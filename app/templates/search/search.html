@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Landing Page - Start Bootstrap Theme</title>
+  <title>Comex Analytics - Happy Analysing!</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://drive.google.com/uc?export=view&id=12nlX1xeEROyAGBOCOL6-Ojf-LJyKsmWQ" rel="stylesheet">
@@ -84,12 +84,12 @@
                   {% endif %}
 
                   <span class="current">
-                      Page {{ page.number }} of {{ page.paginator.num_pages }}.
+                      Página {{ page.number }} de {{ page.paginator.num_pages }}.
                   </span>
 
                   {% if page.has_next %}
-                      <a href="?page={{ page.next_page_number }}&q={{ request.GET.q }}">Próximo</a>
-                      <a href="?page={{ page.paginator.num_pages }}&q={{ request.GET.q }}">Último &raquo;</a>
+                      <a href="?page={{ page.next_page_number }}&q={{ request.GET.q }}">Próximo &raquo;</a>
+                      <!-- <a href="?page={{ page.paginator.num_pages }}&q={{ request.GET.q }}">Último &raquo;</a> -->
                   {% endif %}
               </span>
             </div>           
@@ -109,22 +109,22 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#">Sobre</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+              <a href="#">Contato</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a href="https://github.com/thiagoasiahub/comex_app">Open Source</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
+              <a href="https://receita.economia.gov.br/dados">Fonte</a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Asiahub.hk 2020. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
