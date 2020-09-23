@@ -68,8 +68,8 @@
             <tr>
             <td>{{ result.incoterm }}</td>
             <td>{{ result.descricao_do_produto }}</td>
-            <td type="button" class="btn btn-link" data-toggle="popover" title="" data-content="Faça Login para Visualizar">Acessar</td>
-            <td>{{ result.qtd_comercial_field }}</td>
+            <td>{{ result.valor_un_prod_dolar }}</td>
+            <td type="button" class="btn btn-link" data-toggle="popover" title="UNIDADE COMERC." data-content="{{ result.unidade_comerc_field }}">{{ result.qtd_comercial_field }}</td>
             <td>{{ result.anomes }}</td>
             <td type="button" class="btn btn-link" data-toggle="popover" title="DESCRICAO DO CODIGO NCM" data-content="{{ result.descricao_do_codigo_ncm }}">{{ result.cod_ncm }}</td>
             {% endfor %}

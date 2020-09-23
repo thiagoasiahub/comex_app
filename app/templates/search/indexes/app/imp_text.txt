@@ -1,6 +1,7 @@
 {{ object.incoterm }}
 {{ object.descricao_do_produto }}
 {{ object.valor_un_prod_dolar }}
+{{ object.unidade_comerc_field }}
 {{ object.qtd_comercial_field }}
 {{ object.anomes }}
 {{ object.cod_ncm }}
