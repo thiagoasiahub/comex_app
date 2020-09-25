@@ -1,4 +1,6 @@
 django-haystack==2.8.1
 Django==2.2.13
 elasticsearch==2.4.1
-psycopg2-binary==2.8.4
+# psycopg2-binary==2.8.4
+uWSGI>=2.0.18,<2.1
+djangorestframework

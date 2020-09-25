@@ -1,10 +1,29 @@
-FROM python:3.7.2
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /comex
-WORKDIR /comex
-ADD requirements.txt /comex/
+FROM python:3.8-alpine
 
-RUN pip install -U pip
-RUN pip install -r requirements.txt
+ENV PATH="/scripts:${PATH}"
 
-ADD . /app/
+COPY ./requirements.txt /requirements.txt
+RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev \
+    && apk add --no-cache mariadb-dev 
+RUN pip install mysqlclient 
+RUN apk del build-deps
+RUN pip install -r /requirements.txt
+RUN apk del .tmp
+
+RUN mkdir /app
+COPY ./ /app
+WORKDIR /app
+COPY ./scripts /scripts
+
+RUN chmod +x /scripts/*
+
+RUN mkdir -p /vol/web/media
+RUN mkdir -p /vol/web/static
+RUN adduser -D user
+RUN chown -R user:user /vol
+RUN chmod -R 755 /vol/web
+USER user
+
+CMD ["entrypoint.sh"]
