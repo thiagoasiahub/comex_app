@@ -6,9 +6,9 @@ class Imp(models.Model):
     anomes = models.IntegerField(db_column='ANOMES', blank=True, null=True)  # Field name made lowercase.
     cod_ncm = models.IntegerField(db_column='COD.NCM', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     descricao_do_codigo_ncm = models.TextField(db_column='DESCRICAO DO CODIGO NCM', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
-    pais = models.TextField(db_column='PAIS', blank=True, null=True)  # Field name made lowercase.
+    pais = models.IntegerField(db_column='PAIS', blank=True, null=True)  # Field name made lowercase.
     pais_de_origem = models.TextField(db_column='PAIS DE ORIGEM', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
-    pais_0_field = models.TextField(db_column='PAIS_[0]', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
+    pais_0_field = models.IntegerField(db_column='PAIS_[0]', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     pais_de_aquisicao = models.TextField(db_column='PAIS DE AQUISICAO', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     und_estat_field = models.IntegerField(db_column='UND.ESTAT.', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     unidade_de_medida = models.TextField(db_column='UNIDADE DE MEDIDA', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
@@ -20,7 +20,7 @@ class Imp(models.Model):
     vl_frete_dolar = models.TextField(db_column='VL FRETE DOLAR', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     vl_seguro_dolar = models.TextField(db_column='VL SEGURO DOLAR', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     valor_un_prod_dolar = models.TextField(db_column='VALOR UN.PROD.DOLAR', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
-    qtd_comercial_field = models.IntegerField(db_column='QTD COMERCIAL.', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
+    qtd_comercial_field = models.TextField(db_column='QTD COMERCIAL.', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     tot_un_prod_dolar = models.TextField(db_column='TOT.UN.PROD.DOLAR', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     unidade_desembarque = models.TextField(db_column='UNIDADE DESEMBARQUE', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     unidade_desembaraco = models.TextField(db_column='UNIDADE DESEMBARACO', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
@@ -33,4 +33,4 @@ class Imp(models.Model):
 
     class Meta:
         # managed = False
-        db_table = 'imps'
+        db_table = 'imp'
