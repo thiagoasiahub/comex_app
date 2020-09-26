@@ -25,10 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'changeme')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DEBUG', 0)))
 
-ALLOWED_HOSTS = []
-ALLOWED_HOSTS_ENV = os.environ.get('ALLOWED_HOSTS')
-if ALLOWED_HOSTS_ENV:
-    ALLOWED_HOSTS.extend(ALLOWED_HOSTS_ENV.split(','))
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -96,8 +93,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'imports',
         'USER': 'admin',
-        'PASSWORD': 'M3lb0urn3',
-        'HOST': 'database-2.cuxefn6va1kd.us-east-2.rds.amazonaws.com',
+        'PASSWORD': 'passwd123',
+        'HOST': 'database-1.cjnoxpwzkcw5.sa-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
