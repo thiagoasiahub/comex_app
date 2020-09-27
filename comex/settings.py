@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
+        'URL': 'elasticsearch:9200/',
         'INDEX_NAME': 'haystack',
     },
 }
@@ -97,7 +97,7 @@ DATABASES = {
         'NAME': 'imports',
         'USER': 'admin',
         'PASSWORD': 'passwd123',
-        'HOST': 'database-1.cjnoxpwzkcw5.sa-east-1.rds.amazonaws.com',
+        'HOST': 'database-2.cjnoxpwzkcw5.sa-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
