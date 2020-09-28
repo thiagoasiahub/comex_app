@@ -6,10 +6,7 @@ from app.models import Imp
 
 # Create your views here.
 def std(request):
-    total_imports = Imp.objects.count()
-    total_imports = f'{total_imports:,}'
-    
-    return render(request, 'index.html', {'total_imports' : total_imports,})
+    return render(request, 'index.html',)
 
 def search(request):
     query = request.GET.get('q', '')
@@ -37,9 +34,6 @@ def search(request):
 
     context['results'] = results
     # Pagitaion END
-
-    imports_count = int(Imp.objects.filter(Q(descricao_do_produto__icontains=query) | Q(incoterm__icontains=query) | Q(cod_ncm__icontains=query)).count())
-    imports_count = f'{imports_count:,}'
 
     return render(request, 'search.html', {'results' : results, 
                                             'imports_count' : imports_count,
