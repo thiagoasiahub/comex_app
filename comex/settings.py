@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'changeme')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.environ.get('DEBUG', 0)))
+DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS_ENV = os.environ.get('ALLOWED_HOSTS')
@@ -97,7 +97,7 @@ DATABASES = {
         'NAME': 'imports',
         'USER': 'admin',
         'PASSWORD': 'passwd123',
-        'HOST': 'database-2.cjnoxpwzkcw5.sa-east-1.rds.amazonaws.com',
+        'HOST': 'database-1.cuxefn6va1kd.us-east-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
